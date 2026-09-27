@@ -12,8 +12,6 @@
         pkgs = nixpkgs.legacyPackages.${system};
         python = pkgs.python3;
 
-        # --- inline packages missing from nixpkgs ---
-
         customtkinter = python.pkgs.buildPythonPackage rec {
           pname = "customtkinter";
           version = "5.2.2";
@@ -34,7 +32,7 @@
           format = "pyproject";
           src = python.pkgs.fetchPypi {
             inherit pname version;
-            sha256 = "sha256-r0MJ3pZc/pjkimuFJilexlBmwfPCf/AMp5kWr+lv+04=";
+            sha256 = "sha256-tUKOEXAmPrXepEwl3DiV7ddeb1IwCYY1PNY1M/59+LE=";
           };
           build-system = [ python.pkgs.setuptools ];
           doCheck = false;
@@ -50,7 +48,7 @@
           };
           build-system = [ python.pkgs.setuptools ];
           propagatedBuildInputs = [ python.pkgs.pillow ]
-            ++ pkgs.lib.optionals pkgs.stdenv.isLinux [ python.pkgs.pygobject3 ];
+            ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [ python.pkgs.pygobject3 ];
           doCheck = false;
         };
 
@@ -62,8 +60,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "Flowseal";
             repo = "tg-ws-proxy";
-            rev = "main";
-            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+            rev = "caa949bee0873d2b95dfb4fbeb1b7868b0ee3843";
+            sha256 = "sha256-c/A66gt5buAbdOBlZ3cVwXfKsHPHdXYJAXGxXObg6Ok=";
           };
 
           build-system = [ python.pkgs.hatchling ];
