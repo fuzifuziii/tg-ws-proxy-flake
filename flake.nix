@@ -47,8 +47,8 @@
             rev = "v0.19.5";
             sha256 = "sha256-CZhbaXwKFrRBEomzfFPMQdMkTOl5lbgI64etfDRiRu4=";
           };
-          build-system = [ python.pkgs.setuptools ];
-          propagatedBuildInputs = [ python.pkgs.pillow ]
+          build-system = [ python.pkgs.setuptools python.pkgs.six python.pkgs.sphinx ];
+          propagatedBuildInputs = [ python.pkgs.pillow python.pkgs.six ]
             ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [ python.pkgs.pygobject3 ];
           doCheck = false;
         };
