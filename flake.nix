@@ -48,7 +48,7 @@
             sha256 = "sha256-CZhbaXwKFrRBEomzfFPMQdMkTOl5lbgI64etfDRiRu4=";
           };
           build-system = [ python.pkgs.setuptools python.pkgs.six python.pkgs.sphinx ];
-          propagatedBuildInputs = [ python.pkgs.pillow python.pkgs.six ]
+          propagatedBuildInputs = [ python.pkgs.pillow python.pkgs.six python.pkgs.xlib ]
             ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [ python.pkgs.pygobject3 ];
           doCheck = false;
         };
