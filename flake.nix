@@ -41,9 +41,9 @@
           pname = "pystray";
           version = "0.19.5";
           format = "pyproject";
-          src = python.pkgs.fetchPypi {
-            inherit pname version;
-            sha256 = "sha256-FaTJvD5vUZ34AeJzMGNfQ4HObGAPpBbYkqMcTEXJijM=";
+          src = pkgs.fetchurl {
+            url = "https://files.pythonhosted.org/packages/source/p/pystray/pystray-0.19.5.tar.gz";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
           };
           build-system = [ python.pkgs.setuptools ];
           propagatedBuildInputs = [ python.pkgs.pillow ]
