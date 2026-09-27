@@ -78,6 +78,7 @@
           ];
 
           doCheck = false;
+          pythonRelaxDeps = true;
 
           meta = {
             description = "Local MTProto proxy for Telegram Desktop via WebSocket";
