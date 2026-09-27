@@ -18,7 +18,7 @@
           format = "pyproject";
           src = pkgs.fetchurl {
             url = "https://files.pythonhosted.org/packages/source/c/customtkinter/customtkinter-5.2.2.tar.gz";
-            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+            sha256 = "sha256-/Y2zuvqWHJgu5gMNuoC0wuJYWGMHVrUTmG2xkRPY0gc=";
           };
           build-system = [ python.pkgs.setuptools ];
           propagatedBuildInputs = [ python.pkgs.tkinter darkdetect ];
