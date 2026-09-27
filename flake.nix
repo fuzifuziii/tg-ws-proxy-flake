@@ -45,7 +45,7 @@
             owner = "moses-palmer";
             repo = "pystray";
             rev = "v0.19.5";
-            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+            sha256 = "sha256-CZhbaXwKFrRBEomzfFPMQdMkTOl5lbgI64etfDRiRu4=";
           };
           build-system = [ python.pkgs.setuptools ];
           propagatedBuildInputs = [ python.pkgs.pillow ]
