@@ -15,13 +15,12 @@
         customtkinter = python.pkgs.buildPythonPackage rec {
           pname = "customtkinter";
           version = "5.2.2";
-          format = "wheel";
-          src = python.pkgs.fetchPypi {
-            inherit pname version;
-            format = "wheel";
-            python = "py3";
-            sha256 = "sha256-QFnRNWRNVXTKpM+h8n1EeHCJTkMGJLIDblR8Yy0z8IM=";
+          format = "pyproject";
+          src = pkgs.fetchurl {
+            url = "https://files.pythonhosted.org/packages/source/c/customtkinter/customtkinter-5.2.2.tar.gz";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
           };
+          build-system = [ python.pkgs.setuptools ];
           propagatedBuildInputs = [ python.pkgs.tkinter darkdetect ];
           doCheck = false;
         };
