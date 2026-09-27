@@ -41,8 +41,10 @@
           pname = "pystray";
           version = "0.19.5";
           format = "pyproject";
-          src = pkgs.fetchurl {
-            url = "https://files.pythonhosted.org/packages/source/p/pystray/pystray-0.19.5.tar.gz";
+          src = pkgs.fetchFromGitHub {
+            owner = "moses-palmer";
+            repo = "pystray";
+            rev = "v0.19.5";
             sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
           };
           build-system = [ python.pkgs.setuptools ];
