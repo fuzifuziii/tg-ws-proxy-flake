@@ -12,6 +12,8 @@
         pkgs = nixpkgs.legacyPackages.${system};
         python = pkgs.python3;
 
+        # --- inline packages missing from nixpkgs ---
+
         customtkinter = python.pkgs.buildPythonPackage rec {
           pname = "customtkinter";
           version = "5.2.2";
