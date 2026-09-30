@@ -61,6 +61,7 @@
           nativeBuildInputs = [
             pkgs.wrapGAppsHook3
             pkgs.gobject-introspection
+            pkgs.libayatana-appindicator
           ];
 
           src = pkgs.fetchFromGitHub {
@@ -81,6 +82,8 @@
             customtkinter
             pystray
             pkgs.gtk3
+            pkgs.libayatana-appindicator
+            pkgs.roboto
           ];
 
           doCheck = false;
