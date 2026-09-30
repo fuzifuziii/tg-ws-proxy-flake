@@ -55,7 +55,7 @@
 
         tg-ws-proxy = python.pkgs.buildPythonPackage {
           pname = "tg-ws-proxy";
-          version = "unstable";
+          version = "1.10.4";
           format = "pyproject";
 
           nativeBuildInputs = [
@@ -67,8 +67,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "Flowseal";
             repo = "tg-ws-proxy";
-            rev = "caa949bee0873d2b95dfb4fbeb1b7868b0ee3843";
-            sha256 = "sha256-c/A66gt5buAbdOBlZ3cVwXfKsHPHdXYJAXGxXObg6Ok=";
+            tag = "v1.10.4";
+            sha256 = "sha256-emR1+31feNDNGzRJ7DSjf724bcK4+LpXqnCdRiAXWjM=";
           };
 
           build-system = [ python.pkgs.hatchling ];
@@ -122,13 +122,13 @@
 
             user = lib.mkOption {
               type = lib.types.str;
-              description = "Пользователь, от имени которого запускать прокси";
+              description = "The user under whom the proxy service will run";
             };
 
             port = lib.mkOption {
               type = lib.types.port;
               default = 1443;
-              description = "Локальный порт MTProto прокси";
+              description = "The local port for the MTProto proxy";
             };
           };
 
