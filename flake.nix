@@ -21,7 +21,7 @@
             sha256 = "sha256-/Y2zuvqWHJgu5gMNuoC0wuJYWGMHVrUTmG2xkRPY0gc=";
           };
           build-system = [ python.pkgs.setuptools ];
-          propagatedBuildInputs = [ python.pkgs.tkinter darkdetect ];
+          propagatedBuildInputs = [ python.pkgs.tkinter darkdetect python.pkgs.packaging ];
           doCheck = false;
         };
 
