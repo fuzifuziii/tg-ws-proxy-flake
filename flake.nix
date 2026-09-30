@@ -58,6 +58,11 @@
           version = "unstable";
           format = "pyproject";
 
+          nativeBuildInputs = [
+            pkgs.wrapGAppsHook3
+            pkgs.gobject-introspection
+          ];
+
           src = pkgs.fetchFromGitHub {
             owner = "Flowseal";
             repo = "tg-ws-proxy";
@@ -75,6 +80,7 @@
             pillow
             customtkinter
             pystray
+            pkgs.gtk3
           ];
 
           doCheck = false;
